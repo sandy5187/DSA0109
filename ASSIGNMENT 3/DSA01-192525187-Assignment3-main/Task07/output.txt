@@ -1,0 +1,19 @@
+=== Q7: DESIGN A COMPLEX-NUMBER CLASS (AC CIRCUIT CALCULATOR) ===
+
+--- 1. COMPONENT IMPEDANCES (R, L, C at w = 1000 rad/s) ---
+Resistor   ZR: 100.00 + 0.00j, |ZR| = 100.00 ohms
+Inductor   ZL: 0.00 + 100.00j, |ZL| = 100.00 ohms
+Capacitor  ZC: 0.00 - 100.00j, |ZC| = 100.00 ohms
+
+--- 2. SERIES RLC CIRCUIT IMPEDANCE (Zseries = ZR + ZL + ZC) ---
+Z_series: 100.00 + 0.00j, |Z_series| = 100.00 ohms
+Hand Calculation: (100 + 0j) + (0 + 100j) + (0 - 100j) = 100.00 + 0.00j, |Z| = 100.00 ohms (Resonance!)
+
+--- 3. PARALLEL RL BRANCH (Z_parallel = (ZR * ZL) / (ZR + ZL)) ---
+Z_par_num: 0.00 + 10000.00j
+Z_par_den: 100.00 + 100.00j
+Z_parallel: 50.00 + 50.00j, |Z_parallel| = 70.71 ohms
+Hand Calculation: (100 * 100j) / (100 + 100j) = 10000j / (100 + 100j) = 50.00 + 50.00j, |Z| = 70.71 ohms
+
+--- 4. SAFE DIVISION BY ZERO IMPEDANCE TEST ---
+[Math Error: Complex Division by Zero Impedance!] ZR / Z_zero result: nan - -nanj (Safely caught, no crash)

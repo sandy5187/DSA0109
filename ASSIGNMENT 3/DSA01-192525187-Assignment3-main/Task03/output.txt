@@ -1,0 +1,20 @@
+=== Q3: DYNAMIC CONSTRUCTORS AND DESTRUCTORS ===
+
+--- 1. PREDICT THE OUTPUT SECTION (Logger Lifecycle) ---
++A +B -B copyAc use -Ac +P -P end -A 
+
+--- 2. AUDITORIUM SEAT MAP DYNAMIC ALLOCATION & LIFECYCLE ---
+[Auditorium Constructor: Allocated 3x4 seat map for 'Tech Symposium']
+
+Seat Map for Tech Symposium (3 rows, 4 cols):
+Row 1: X X . . 
+Row 2: . . X . 
+Row 3: . . . . 
+
+Cancelling seat (0, 1)...
+
+Seat Map for Tech Symposium (3 rows, 4 cols):
+Row 1: X . . . 
+Row 2: . . X . 
+Row 3: . . . . 
+[Auditorium Destructor: Released all memory for 'Tech Symposium']
